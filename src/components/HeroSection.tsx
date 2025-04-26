@@ -1,50 +1,41 @@
 
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const HeroSection = () => {
-  const quickLinks = [
-    { title: "Перейти к памятке", href: "/guidelines", icon: "📝" },
-    { title: "Инструкции по входу в электронный дневник", href: "/instructions", icon: "🔑" },
-    { title: "Задать вопрос педагогу", href: "/ask", icon: "❓" },
-    { title: "Оценить взаимодействие", href: "/feedback", icon: "⭐" }
-  ];
-
   return (
-    <section className="container grid grid-cols-1 gap-6 py-8 md:grid-cols-2 md:py-12 lg:py-16">
-      <div className="flex flex-col justify-center space-y-4">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-          Эффективная и уважительная онлайн-коммуникация: вместе для будущего детей
-        </h1>
-        <p className="text-muted-foreground md:text-xl">
-          Наш проект создан для построения конструктивного диалога между школой и родителями в цифровом пространстве.
-          Мы стремимся сделать общение продуктивным, уважительным и комфортным для всех участников образовательного процесса.
-        </p>
-        <p className="text-muted-foreground md:text-xl">
-          Здесь вы найдете рекомендации по эффективной коммуникации, правила цифрового этикета и практические инструменты,
-          которые помогут наладить взаимодействие между педагогами и родителями во благо развития детей.
-        </p>
-        <div className="grid grid-cols-1 gap-3 pt-4 sm:grid-cols-2">
-          {quickLinks.map((link) => (
-            <Link key={link.title} to={link.href}>
-              <Button variant="outline" className="w-full justify-start text-left">
-                <span className="mr-2">{link.icon}</span>
-                {link.title}
-              </Button>
-            </Link>
-          ))}
+    <div className="container py-8 md:py-12">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-primary mb-6 md:text-4xl">
+            Эффективная и уважительная онлайн-коммуникация: вместе для будущего детей
+          </h1>
+          
+          <div className="space-y-4 mb-8 text-muted-foreground">
+            <p>
+              Наш проект создан для улучшения цифрового взаимодействия между школой и родителями, обеспечивая комфортное и продуктивное общение всех участников образовательного процесса.
+            </p>
+            <p>
+              Здесь вы найдете регламенты и рекомендации, которые помогут сделать онлайн-коммуникацию более эффективной и уважительной.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Button className="w-full">Перейти к памятке</Button>
+            <Button className="w-full">Электронный дневник</Button>
+            <Button className="w-full">Задать вопрос педагогу</Button>
+            <Button className="w-full">Оценить взаимодействие</Button>
+          </div>
         </div>
-      </div>
-      <div className="flex items-center justify-center">
-        <div className="relative h-[350px] w-[350px] overflow-hidden rounded-xl md:h-[450px] md:w-[450px]">
-          <img
-            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80"
-            alt="Взаимодействие педагог-родитель-ребёнок"
-            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+        
+        <div className="hidden md:block">
+          <img 
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+            alt="Взаимодействие педагог-родитель-ребёнок" 
+            className="rounded-lg shadow-lg"
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
