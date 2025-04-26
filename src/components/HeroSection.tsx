@@ -6,7 +6,7 @@ const HeroSection = () => {
     <div className="container py-8 md:py-12">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-primary mb-6 md:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground mb-6 md:text-4xl">
             Эффективная и уважительная онлайн-коммуникация: вместе для будущего детей
           </h1>
           
