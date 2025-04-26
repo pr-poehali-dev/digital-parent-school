@@ -29,8 +29,8 @@ const HeroSection = () => {
         
         <div className="hidden md:block">
           <img 
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-            alt="Взаимодействие педагог-родитель-ребёнок" 
+            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+            alt="Визуализация взаимодействия педагог-родитель-ребёнок" 
             className="rounded-lg shadow-lg"
           />
         </div>
