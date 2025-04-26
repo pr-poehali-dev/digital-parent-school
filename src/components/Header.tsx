@@ -1,6 +1,12 @@
 
 import { Link } from "react-router-dom";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { 
+  NavigationMenu, 
+  NavigationMenuItem, 
+  NavigationMenuLink, 
+  NavigationMenuList,
+  navigationMenuTriggerStyle 
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const menuItems = [
@@ -23,11 +29,15 @@ const Header = () => {
           <NavigationMenuList className="flex-wrap">
             {menuItems.map((item) => (
               <NavigationMenuItem key={item.title}>
-                <Link to={item.href}>
-                  <NavigationMenuLink className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary">
+                {/* Исправлено вложение тега <a> в <a> */}
+                <NavigationMenuLink 
+                  className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary"
+                  asChild
+                >
+                  <Link to={item.href}>
                     {item.title}
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
