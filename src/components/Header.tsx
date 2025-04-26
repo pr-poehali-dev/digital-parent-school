@@ -16,12 +16,12 @@ const Header = () => {
 
   return (
     <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex flex-col md:flex-row h-auto md:h-16 items-center py-3 md:py-0">
-        <Link to="/" className="text-xl font-bold text-primary mr-8 mb-3 md:mb-0">
+      <div className="container flex items-center h-16 whitespace-nowrap overflow-x-auto">
+        <Link to="/" className="text-primary text-lg font-medium mr-8 flex-shrink-0">
           Школа и родители: цифровое партнёрство
         </Link>
         
-        <nav className="flex flex-wrap">
+        <nav className="flex flex-row space-x-1">
           {menuItems.map((item) => {
             const isActive = location.pathname === item.href || 
               (item.href !== "/" && location.pathname.startsWith(item.href));
@@ -30,10 +30,10 @@ const Header = () => {
               <Link 
                 key={item.title}
                 to={item.href}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex-shrink-0 ${
                   isActive 
-                    ? "bg-primary text-white" 
-                    : "text-muted-foreground hover:text-primary hover:bg-primary/10"
+                    ? "bg-[#2563eb] text-white" 
+                    : "text-foreground hover:text-[#2563eb]"
                 }`}
               >
                 {item.title}
